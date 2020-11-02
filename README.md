@@ -1,5 +1,34 @@
 <img src="/docs/rnsk-logo.jpg" alt="Webohjelmointi2" width="400" />
 
+#### 1.0 ajaminen
+
+commands/run-web
+
+---
+
+#### 1.1 Avaa code
+
+commands/code
+
+
+---
+
+#### 1.2
+
+- __React - JS kirjasto__
+
+- Redux - React tilanhallinta
+    - [Redux](https://redux.js.org/docs/introduction/)
+
+- React router - React reititys sivujen välillä
+    - [React Router](https://github.com/ReactTraining/react-router)
+
+- Firebase - 'ilmainen' tietokanta & hostaus palvelu
+    - [Firebase](https://firebase.google.com/)
+---
+
+<img src="/docs/rnsk-logo.jpg" alt="KompuutteriNurkkaus" width="400" />
+
 # React (Web + Native), yhden koodipohjan sovellus
 
 ---
