@@ -1,7 +1,10 @@
 ### 1.0 ajaminen
 
+_(komentorivi -> cd.. npm i)_
+
 commands/run-web
 commands/code
+
 
 tai suoraan: https://webohjelmointi-2.web.app/
 ---
