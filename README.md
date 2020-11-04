@@ -1,19 +1,14 @@
 <img src="/docs/rnsk-logo.jpg" alt="Webohjelmointi2" width="400" />
 
-#### 1.0 ajaminen
+### 1.0 ajaminen
 
 commands/run-web
-
----
-
-#### 1.1 Avaa code
-
 commands/code
 
-
+tai suoraan: https://webohjelmointi-2.web.app/
 ---
 
-#### 1.2
+### 1.2 apukirjastot
 
 - __React - JS kirjasto__
 
@@ -30,13 +25,7 @@ commands/code
 
 
 
-### 2
-
-hostattu nettisivu: https://webohjelmointi-2.web.app/
-
-
-
-#### 3
+## 3
 
 - koodin toteutus
     - src kansio on juuri, josta löytyy kaikki tärkeä
