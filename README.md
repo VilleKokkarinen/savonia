@@ -1,5 +1,3 @@
-<img src="/docs/rnsk-logo.jpg" alt="Webohjelmointi2" width="400" />
-
 ### 1.0 ajaminen
 
 commands/run-web
