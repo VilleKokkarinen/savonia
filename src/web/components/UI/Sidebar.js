@@ -13,38 +13,17 @@ const SidebarNavItems = () => (
       </Link>
     </NavItem>
     <NavItem>
-      <Link className={`nav-link ${window.location.pathname.startsWith('/post') && 'active'}`} to="/posts">
+      <Link className={`nav-link ${window.location.pathname.startsWith('/customers') && 'active'}`} to="/customers">
         <i className="icon-notebook" />
         {' '}
-        <span>Posts</span>
+        <span>customers NoSQL</span>
       </Link>
-    </NavItem>
-    <NavItem>
-      <Link className={`nav-link ${window.location.pathname.startsWith('/chats') && 'active'}`} to="/chats">
-        <i className="icon-notebook" />
-        {' '}
-        <span>Priv. Chats</span>
-      </Link>
-    </NavItem>
-    <NavItem>
-      <Link className={`nav-link ${window.location.pathname.startsWith('/member') && 'active'}`} to="/members">
-        <i className="icon-notebook" />
-        {' '}
-        <span>Members</span>
-      </Link>
-    </NavItem>
-    <NavItem>
-      <Link className={`nav-link ${window.location.pathname.startsWith('/create-post') && 'active'}`} to="/create-post">
-        <i className="icon-notebook" />
-        {' '}
-        <span className={`text ${window.location.pathname.startsWith('/create-post') && 'active'}`} >New Post</span>
-      </Link>
-    </NavItem>
+    </NavItem>   
   </div>
 );
 
 const Sidebar = () => (
-  <Col sm="2" md="2" className="d-none d-sm-block sidebar">
+  <Col sm="2" className="d-none d-sm-block sidebar">
     <Nav vertical>
       {SidebarNavItems()}
     </Nav>

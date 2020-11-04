@@ -5,7 +5,7 @@
  
  .SideBarTemplateCol {
   @media (min-width: 576px) {
-    margin-left: 150px;
+    margin-left: 175px;
     padding: 3rem;
   }
   margin-left: 0;
@@ -67,7 +67,7 @@
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   background-color: $DarkGray;
   border-right: 1px solid $Black;
-  max-width: 150px;
+  max-width: 175px;
   min-width: 150px;
 
   .nav {

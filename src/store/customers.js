@@ -1,0 +1,36 @@
+export default {
+  loading: true,
+  error: null,
+  customers: [
+    {
+      placeholder: true,
+      id: 0,
+      name: 'KALLE TAPPINEN',
+      address: 'OPISTOTIE 2',
+      postnumber:'70100',
+      postlocation: 'Kuopio',
+      registerdate: '1603314218',
+      asty_id: '1',
+    },
+    {
+      placeholder: true,
+      id: 1,
+      name: 'VILLE VALLATON',
+      address: 'MICROKATU 2',
+      postnumber:'70100',
+      postlocation: 'Kuopio',
+      registerdate: '1604345218',
+      asty_id: '2',
+    },
+    {
+      placeholder: true,
+      id: 2,
+      name: 'Kalle Östilä',
+      address: 'teku',
+      postnumber:'70100',
+      postlocation: 'Kuopio',
+      registerdate: '1602314218',
+      asty_id: '1',
+    },
+  ],
+};

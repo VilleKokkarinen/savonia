@@ -11,15 +11,12 @@ export const errorMessages = {
   // Firebase Related
   invalidFirebase: 'Firebase is not connected correctly',
 
-  // Member
-  memberExists: 'Member already exists',
-  missingFirstName: 'First name is missing',
-  missingLastName: 'Last name is missing',
-  missingEmail: 'Email is missing',
-  missingPassword: 'Password is missing',
-  passwordsDontMatch: 'Passwords do not match',
+  // Customer
+  missingUID: 'UID is missing',
+  missingName: 'Name is missing',
+  missingAddress: 'Address is missing',
+  missingPostnumber: 'Postnumber is missing',
+  missingPostlocation: 'Postlocation is missing',
 
-  // Recipes
-  recipe404: 'Recipe not found',
-  missingMealId: 'Missing meal definition',
+ 
 };

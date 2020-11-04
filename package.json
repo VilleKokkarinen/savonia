@@ -1,6 +1,5 @@
 {
   "name": "Webohjelmointi2",
-  "homepage": "webohjelmointi2.netlify.com",
   "version": "0.1.0",
   "private": true,
   "browserslist": [
@@ -11,8 +10,10 @@
   ],
   "scripts": {
     "web": "react-scripts start",
-    "web-bundle": "react-scripts build",
-    "deploy": "gh-pages -d build"
+    "bundle": "react-scripts build",
+    "build": "react-scripts build", 
+    "predeploy": "npm run build", 
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@grpc/grpc-js": "^1.0.3",
@@ -39,7 +40,6 @@
     "eslint-plugin-jest": "^22.5.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
-    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "react-scripts": "2.1.8"
   }

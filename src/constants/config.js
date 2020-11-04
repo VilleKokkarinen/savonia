@@ -2,7 +2,7 @@ const devMode = (process.env.NODE_ENV !== 'development');
 
 export default {
   // App Details
-  appName: 'webohjelmointi 2 Ville kokkarinen',
+  appName: 'Ville K - webOhj.',
 
   // Build Configuration - eg. Debug or Release?
   DEV: devMode,

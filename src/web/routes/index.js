@@ -8,36 +8,16 @@ import TemplateSidebar from '../components/Templates/Sidebar';
 // Routes
 import Home from '../components/Home';
 
-import PostsContainer from '../../containers/Posts';
-import PostListingComponent from '../components/Post/Listing';
-import PostSingleComponent from '../components/Post/Single';
+import CustomersContainer from '../../containers/Customers';
+import CustomerListingComponent from '../components/Customer/Listing';
+import CustomerSingleComponent from '../components/Customer/Single';
 
-import ChatContainer from '../../containers/Chat';
-import ChatsContainer from '../../containers/Chats';
-import ChatListingComponent from '../components/Chat/Listing';
-import ChatSingleComponent from '../components/Chat/Single';
+import UpdateCustomerContainer from '../../containers/UpdateCustomer';
+import UpdateCustomer from '../components/Customer/Update';
 
-import MembersContainer from '../../containers/Members';
-import MemberListingComponent from '../components/Member/Listing';
-import MemberSingleComponent from '../components/Member/Single';
 
-import CreatePostComponent from '../components/Post/Create';
-import CreatePostContainer from '../../containers/CreatePost';
-
-import NewChatComponent from '../components/Chat/NewChat';
-import NewChatContainer from '../../containers/NewChat';
-
-import SignUpContainer from '../../containers/SignUp';
-import SignUpComponent from '../components/User/SignUp';
-
-import LoginContainer from '../../containers/Login';
-import LoginComponent from '../components/User/Login';
-
-import ForgotPasswordContainer from '../../containers/ForgotPassword';
-import ForgotPasswordComponent from '../components/User/ForgotPassword';
-
-import UpdateProfileContainer from '../../containers/UpdateProfile';
-import UpdateProfileComponent from '../components/User/UpdateProfile';
+import NewCustomerContainer from '../../containers/NewCustomer';
+import NewCustomer from '../components/Customer/New';
 
 import Error from '../components/UI/Error';
 
@@ -51,103 +31,41 @@ const Index = () => (
           <Home {...props} />
         </TemplateSidebar>
       )}
-    />
+    />  
     <Route
-      path="/sign-up"
+      path="/customers"
       render={props => (
-        <TemplateNothing pageTitle="Sign Up">
-          <SignUpContainer {...props} Layout={SignUpComponent} />
-        </TemplateNothing>
-      )}
-    />
-    <Route
-      path="/login"
-      render={props => (
-        <TemplateNothing pageTitle="Login">
-          <LoginContainer {...props} Layout={LoginComponent} />
-        </TemplateNothing>
-      )}
-    />
-    <Route
-      path="/forgot-password"
-      render={props => (
-        <TemplateNothing pageTitle="Forgot Password">
-          <ForgotPasswordContainer {...props} Layout={ForgotPasswordComponent} />
-        </TemplateNothing>
-      )}
-    />
-    <Route
-      path="/update-profile"
-      render={props => (
-        <TemplateSidebar pageTitle="Update Profile">
-          <UpdateProfileContainer {...props} Layout={UpdateProfileComponent} />
+        <TemplateSidebar pageTitle="Customers">
+          <CustomersContainer {...props} Layout={CustomerListingComponent} />
         </TemplateSidebar>
       )}
     />
     <Route
-      path="/newchat"
+      path="/customer/:id"
       render={props => (
-        <TemplateSidebar pageTitle="Send a message">
-          <NewChatContainer {...props} Layout={NewChatComponent} />
+        <TemplateSidebar pageTitle="Customer View">
+          <CustomersContainer {...props} Layout={CustomerSingleComponent} />
         </TemplateSidebar>
       )}
-    />
-    <Route
-      path="/posts"
+    />  
+     <Route
+      path="/updatecustomer/:id"
+      exact
       render={props => (
-        <TemplateSidebar pageTitle="Posts">
-          <PostsContainer {...props} Layout={PostListingComponent} />
+        <TemplateSidebar pageTitle="Customer Update View">
+          <UpdateCustomerContainer {...props} Layout={UpdateCustomer} />
         </TemplateSidebar>
       )}
-    />
-    <Route
-      path="/post/:id"
+    />  
+     <Route
+      path="/createcustomer"
+      exact
       render={props => (
-        <TemplateSidebar pageTitle="Post View">
-          <PostsContainer {...props} Layout={PostSingleComponent} />
+        <TemplateSidebar pageTitle="New Customer View">
+          <NewCustomerContainer {...props} Layout={NewCustomer} />
         </TemplateSidebar>
       )}
-    />
-    <Route
-      path="/create-post"
-      render={props => (
-        <TemplateSidebar pageTitle="Create a Post">
-          <CreatePostContainer {...props} Layout={CreatePostComponent} />
-        </TemplateSidebar>
-      )}
-    />
-    <Route
-      path="/members"
-      render={props => (
-        <TemplateSidebar pageTitle="Members">
-          <MembersContainer {...props} Layout={MemberListingComponent} />
-        </TemplateSidebar>
-      )}
-    />
-    <Route
-      path="/member/:id"
-      render={props => (
-        <TemplateSidebar pageTitle="Member View">
-          <MembersContainer {...props} Layout={MemberSingleComponent} />
-        </TemplateSidebar>
-      )}
-    />
-    <Route
-      path="/chats"
-      render={props => (
-        <TemplateSidebar pageTitle="Chats">
-          <ChatsContainer {...props} Layout={ChatListingComponent} />
-        </TemplateSidebar>
-      )}
-    />
-    <Route
-      path="/chat/:id"
-      render={props => (
-        <TemplateSidebar pageTitle="Chat View">
-          <ChatContainer {...props} Layout={ChatSingleComponent} />
-        </TemplateSidebar>
-      )}
-    />
+    />  
     <Route
       render={props => (
         <TemplateSidebar pageTitle="404 - Page not found">

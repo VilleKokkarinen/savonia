@@ -1,8 +1,6 @@
 import status from './status';
-import member from './member';
-import members from './members';
-import chats from './chats';
-import posts from './posts';
+import customers from './customers';
+import customer from './customer';
 
 const rehydrated = (state = false, action) => {
   switch (action.type) {
@@ -16,8 +14,6 @@ const rehydrated = (state = false, action) => {
 export default {
   rehydrated,
   status,
-  member,
-  members,
-  posts,
-  chats,
+  customers,
+  customer,
 };
