@@ -13,16 +13,27 @@ tai suoraan: https://webohjelmointi-2.web.app/
 
 ##### MySQL ( tehtävät 1,2,(3?) )
 
-1. käynnistä resti -> REST/ komentorivi -> node server.js -> porttiin 3000
 
-2. käynnistä käyttöliittymä -> commands/run-web -> porttiin 3001
+1. asenna node moduulipaketit
+npm i
+
+cd REST
+
+npm i
+
+---
+
+
+2. käynnistä resti -> REST/ komentorivi -> node server.js -> porttiin 3000
+
+3. käynnistä käyttöliittymä -> commands/run-web -> porttiin 3001
 
 (käy vaihtamassa portit jos käytät toisia.
 -> .env
 -> REST/app/config/portconfig
 )
 
-3. -> koodit commands/code
+4. -> koodit commands/code
 
 ---
 
