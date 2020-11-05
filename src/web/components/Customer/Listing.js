@@ -57,7 +57,7 @@ class CustomerListing extends React.Component{
   render() {
     const { loading, customers } = this.props;
     const {
-      name, address, customertype,
+      name, address, asty_id,
     } = this.state
     
   var cards = this.filtered.map(item => (
@@ -98,10 +98,10 @@ class CustomerListing extends React.Component{
           <Input
             style={{maxWidth:150, margin: 5}}
             type="text"
-            name="customertype"
-            id="customertype"
-            placeholder="customertype"
-            value={customertype}
+            name="asty_id"
+            id="asty_id"
+            placeholder="asty_id"
+            value={asty_id}
             onChange={this.handleChange}
           />
            </Row>

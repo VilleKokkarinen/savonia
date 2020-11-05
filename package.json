@@ -11,8 +11,8 @@
   "scripts": {
     "web": "react-scripts start",
     "bundle": "react-scripts build",
-    "build": "react-scripts build", 
-    "predeploy": "npm run build", 
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "firebase deploy"
   },
   "dependencies": {

@@ -13,10 +13,17 @@ const SidebarNavItems = () => (
       </Link>
     </NavItem>
     <NavItem>
-      <Link className={`nav-link ${window.location.pathname.startsWith('/customers') && 'active'}`} to="/customers">
+      <Link className={`nav-link ${window.location.pathname.endsWith('/customers') && 'active'}`} to="/customers">
         <i className="icon-notebook" />
         {' '}
         <span>customers NoSQL</span>
+      </Link>
+    </NavItem>
+    <NavItem>
+      <Link className={`nav-link ${window.location.pathname.startsWith('/customersMySQL') && 'active'}`} to="/customersMySQL">
+        <i className="icon-notebook" />
+        {' '}
+        <span>customers MySQL</span>
       </Link>
     </NavItem>   
   </div>

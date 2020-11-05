@@ -8,7 +8,6 @@ export function getCustomers() {
      
       const data = snapshot.val() || [];
       
-      console.log(data)
       resolve(dispatch({
         type: 'CUSTOMERS_REPLACE',
         data: data,
@@ -25,8 +24,6 @@ export function getCustomerData(UID) {
      
       const data = snapshot.val() || [];
       
-      console.log('action', data)
-
       resolve(dispatch({
         type: 'CUSTOMER_REPLACE',
         data: data,

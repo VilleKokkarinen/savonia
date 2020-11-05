@@ -1,13 +1,25 @@
 ### 1.0 ajaminen
 
-_(komentorivi -> cd.. npm i)_
+___ no sql ___
 
-commands/run-web
+1. commands/run-web
 
-commands/code
-
+2. commands/code
 
 tai suoraan: https://webohjelmointi-2.web.app/
+
+
+---
+
+___MySQL__
+
+1. käynnistä resti -> REST/ komentorivi -> node server.js
+
+2. käynnistä käyttöliittymä -> commands/run-web
+
+(ei samaan porttiin!, se kyllä ehdottaa toista porttia automaattisesti)
+
+3. -> koodit commands/code
 
 ---
 

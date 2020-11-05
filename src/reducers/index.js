@@ -1,6 +1,8 @@
 import status from './status';
 import customers from './customers';
 import customer from './customer';
+import customersMySQL from './customersMySQL';
+import customerMySQL from './customerMySQL';
 
 const rehydrated = (state = false, action) => {
   switch (action.type) {
@@ -16,4 +18,6 @@ export default {
   status,
   customers,
   customer,
+  customersMySQL,
+  customerMySQL,
 };

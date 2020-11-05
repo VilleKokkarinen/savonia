@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { updateCustomer, getCustomerData, deleteCustomer } from '../actions/customers';
+import { updateCustomer, getCustomerData, deleteCustomer } from '../actions/customersMySQL';
 
 class UpdateCustomer extends Component {
   static propTypes = {
     Layout: PropTypes.func.isRequired,
-    customer: PropTypes.shape({}).isRequired,
+    customerMySQL: PropTypes.shape({}).isRequired,
     match: PropTypes.shape({ params: PropTypes.shape({}) }),
     onFormSubmit: PropTypes.func.isRequired,
     onFormSubmitDEL: PropTypes.func.isRequired,
@@ -26,13 +26,14 @@ class UpdateCustomer extends Component {
     loading: false,
   }
   
-  componentDidMount = () => this.fetchData(this.props.match.params.id);
+  componentDidMount = () => {
+      this.fetchData(this.props.match.params.id)
+  }
 
   /**
     * Fetch Data from API, saving to Redux
     */
    fetchData = (uid) => {
-     setTimeout(() => {
       const { fetchCustomer } = this.props;
       this.setState({ loading: true });
       return fetchCustomer(uid)
@@ -42,15 +43,13 @@ class UpdateCustomer extends Component {
         })).catch(err => this.setState({
           loading: false,
           error: err,
-        }));
-     }, 1000);
-   
+        }));   
    }
 
   onFormSubmit = (data) => {
     const { onFormSubmit } = this.props;
 
-    data.UID = this.props.match.params.id
+    data.AVAIN = this.props.match.params.id
     this.setState({ loading: true });
 
     return onFormSubmit(data)
@@ -67,7 +66,7 @@ class UpdateCustomer extends Component {
 
   onFormSubmitDEL = (data) => {
     const { onFormSubmitDEL } = this.props;
-    data.UID = this.props.match.params.id
+    data.AVAIN = this.props.match.params.id
     
     this.setState({ loading: true });
 
@@ -85,14 +84,14 @@ class UpdateCustomer extends Component {
 
   render = () => {
     const { error, loading, success } = this.state;
-    const { Layout, customer, match } = this.props;
+    const { Layout, customerMySQL, match } = this.props;
 
     const id = (match && match.params && match.params.id) ? match.params.id : null;
 
     return (
       <Layout
         error={error}
-        customer={customer.customer}
+        customerMySQL={customerMySQL.customerMySQL}
         loading={loading}
         success={success}
         onFormSubmit={this.onFormSubmit}
@@ -104,7 +103,7 @@ class UpdateCustomer extends Component {
 }
 
 const mapStateToProps = state => ({
-  customer: state.customer || {},
+  customerMySQL: state.customerMySQL || {},
 });
 
 const mapDispatchToProps = {

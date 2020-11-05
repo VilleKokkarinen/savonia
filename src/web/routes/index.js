@@ -15,9 +15,23 @@ import CustomerSingleComponent from '../components/Customer/Single';
 import UpdateCustomerContainer from '../../containers/UpdateCustomer';
 import UpdateCustomer from '../components/Customer/Update';
 
-
 import NewCustomerContainer from '../../containers/NewCustomer';
 import NewCustomer from '../components/Customer/New';
+
+
+
+
+import CustomerListingComponentMySQL from '../components/CustomerMySQL/Listing';
+import CustomerSingleComponentMySQL from '../components/CustomerMySQL/Single';
+import CustomersContainerMySQL from '../../containers/CustomersMySQL';
+
+import NewCustomerContainerMySQL from '../../containers/NewCustomerMySQL';
+import UpdateCustomerContainerMySQL from '../../containers/UpdateCustomerMySQL';
+
+import UpdateCustomerMySQL from '../components/CustomerMySQL/Update';
+import NewCustomerMySQL from '../components/CustomerMySQL/New';
+
+
 
 import Error from '../components/UI/Error';
 
@@ -63,6 +77,41 @@ const Index = () => (
       render={props => (
         <TemplateSidebar pageTitle="New Customer View">
           <NewCustomerContainer {...props} Layout={NewCustomer} />
+        </TemplateSidebar>
+      )}
+    />  
+
+<Route
+      path="/customersMySQL"
+      render={props => (
+        <TemplateSidebar pageTitle="CustomersMySQL">
+          <CustomersContainerMySQL {...props} Layout={CustomerListingComponentMySQL} />
+        </TemplateSidebar>
+      )}
+    />
+    <Route
+      path="/customerMySQL/:id"
+      render={props => (
+        <TemplateSidebar pageTitle="CustomerMySQL View">
+          <CustomersContainerMySQL {...props} Layout={CustomerSingleComponentMySQL} />
+        </TemplateSidebar>
+      )}
+    />  
+     <Route
+      path="/updatecustomerMySQL/:id"
+      exact
+      render={props => (
+        <TemplateSidebar pageTitle="Customer Update MySQL View">
+          <UpdateCustomerContainerMySQL {...props} Layout={UpdateCustomerMySQL} />
+        </TemplateSidebar>
+      )}
+    />  
+     <Route
+      path="/createcustomerMySQL"
+      exact
+      render={props => (
+        <TemplateSidebar pageTitle="New Customer MySQL View">
+          <NewCustomerContainerMySQL {...props} Layout={NewCustomerMySQL} />
         </TemplateSidebar>
       )}
     />  
