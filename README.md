@@ -29,10 +29,14 @@ npm i
 
 3. käynnistä käyttöliittymä -> commands/run-web -> porttiin 3001
 
-(käy vaihtamassa portit jos käytät toisia.
+```
+käy vaihtamassa portit jos käytät toisia.
+
 -> .env
+
 -> REST/app/config/portconfig
-)
+
+```
 
 4. -> koodit commands/code
 
