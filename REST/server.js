@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const app = express();
 
+const defaultPort = require("./app/config/portconfig.js");
 
 const allowedOrigins = ["http://localhost:3000", "http://localhost:3001"];
 
@@ -38,6 +39,6 @@ app.get("/", (req, res) => {
 require("./app/routes/customer.routes.js")(app);
 
 // set port, listen for requests
-app.listen(3000, () => {
-  console.log("Server is running on port 3000.");
+app.listen(defaultPort, () => {
+  console.log(`Server is running on port ${defaultPort}`);
 });
