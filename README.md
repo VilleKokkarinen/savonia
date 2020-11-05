@@ -17,8 +17,8 @@ tai suoraan: https://webohjelmointi-2.web.app/
 
 2. käynnistä käyttöliittymä -> commands/run-web -> porttiin 3001
 
-(käy vaihtamassa portit jos tarvitsee.
--> package.json -> build scriptit
+(käy vaihtamassa portit jos käytät toisia.
+-> .env
 -> REST/app/config/portconfig
 )
 

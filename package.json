@@ -9,10 +9,10 @@
     "not op_mini all"
   ],
   "scripts": {
-    "web": "PORT=3001 react-scripts start",
-    "bundle": "PORT=3001 react-scripts build",
-    "build": "PORT=3001 react-scripts build",
-    "predeploy": "PORT=3001 npm run build",
+    "web": "react-scripts start",
+    "bundle": "react-scripts build",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "firebase deploy"
   },
   "dependencies": {
