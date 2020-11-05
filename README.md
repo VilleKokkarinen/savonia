@@ -1,6 +1,6 @@
 ### 1.0 ajaminen
 
-___ no sql ___
+##### NOSQL
 
 1. commands/run-web
 
@@ -11,7 +11,7 @@ tai suoraan: https://webohjelmointi-2.web.app/
 
 ---
 
-___MySQL__
+##### MySQL ( tehtävät 1,2,(3?) )
 
 1. käynnistä resti -> REST/ komentorivi -> node server.js
 
