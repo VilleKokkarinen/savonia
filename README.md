@@ -74,5 +74,16 @@ npm i
             - components sisältää komponentit
             - routes sisältää reitit
 
+---
 
 
+- REST 
+    - app = sama kuin src
+        - config        -> konffit
+        - controllers   -> kontrollerit
+        - models        -> mallit
+        - routes        -> reitit
+
+
+
+---
