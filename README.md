@@ -2,11 +2,10 @@
 
 ##### NOSQL
 
-1. commands/run-web
 
-2. commands/code
+sama kuin mysql alempana
 
-tai suoraan: https://webohjelmointi-2.web.app/
+tai suoraan selaimessa ilman mitään latailua tai asentelua: https://webohjelmointi-2.web.app/
 
 
 ---
@@ -16,18 +15,14 @@ tai suoraan: https://webohjelmointi-2.web.app/
 
 1. asenna node moduulipaketit
 
-npm i
-
-cd REST
-
-npm i
+npm i pääkansiossa __ja__ REST kansiossa
 
 ---
 
 
-2. käynnistä resti -> REST/ komentorivi -> node server.js -> porttiin 3000
+2. käynnistä resti -> REST/ komentorivi -> node server.js -> aukeaa porttiin 3000
 
-3. käynnistä käyttöliittymä -> commands/run-web -> porttiin 3001
+3. käynnistä käyttöliittymä -> commands/run-web -> aukeaa porttiin 3001
 
 ```
 käy vaihtamassa portit jos käytät toisia.
