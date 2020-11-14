@@ -28,9 +28,6 @@ class UpdateCustomer extends Component {
     const { onFormSubmit } = this.props;
 
     this.setState({ loading: true });
-
-    console.log('dataaaa',this);
-
     return onFormSubmit(data)
       .then(()=> this.setState({
         loading: false,
@@ -46,8 +43,7 @@ class UpdateCustomer extends Component {
   render = () => {
     const { error, loading, success } = this.state;
     const { Layout, match } = this.props;
-
-    console.log('this',this)
+    
     return (
       <Layout
         error={error}
