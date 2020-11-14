@@ -29,8 +29,10 @@ class UpdateCustomer extends Component {
 
     this.setState({ loading: true });
 
+    console.log('dataaaa',this);
+
     return onFormSubmit(data)
-      .then(() => this.setState({
+      .then(()=> this.setState({
         loading: false,
         success: 'Success - added new customer',
         error: null,
@@ -45,6 +47,7 @@ class UpdateCustomer extends Component {
     const { error, loading, success } = this.state;
     const { Layout, match } = this.props;
 
+    console.log('this',this)
     return (
       <Layout
         error={error}

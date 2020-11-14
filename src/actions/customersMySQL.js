@@ -50,13 +50,22 @@ export function createCustomer(formData) {
     body: JSON.stringify(formData) // We send data in JSON format
    }
 
-  return dispatch => new Promise(resolve => fetch('http://localhost:3000/customers', putMethod).then(async (response) => {  
+   console.log('test', putMethod)
+  return dispatch => new Promise(async (resolve, reject) => fetch('http://localhost:3000/customers', putMethod).then(async (response) => {  
     if(response.ok){
       response.json().then(json =>{
-        resolve("added customer")
-      }).catch((err) => console.log('err', err));
-  }}))
+        console.log('ok')
+        return resolve("added customer")
+      }).catch(err => console.log('err', err));
+  }
+  else if(!response.ok){
+    await response.json().then(json =>{
+    return reject(json.message);
+    })  
+  }
+}))
 }
+  
 
 
 export function deleteCustomer(formData) {

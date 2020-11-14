@@ -11,6 +11,17 @@ const Customer = function(customer) {
 };
 
 Customer.create = (newCustomer, result) => {
+
+  for (const [key, value] of Object.entries(newCustomer)) {
+    console.log(`${key}: ${value}`);
+    if(value == null || value == ""){
+      console.log('tyhjä');
+      const err = {message: key + " oli tyhjä"}
+      result(err, null);
+      return;
+    }
+  }
+
   sql.query("INSERT INTO asiakas SET ?", newCustomer, (err, res) => {
     if (err) {
       console.log("error: ", err);

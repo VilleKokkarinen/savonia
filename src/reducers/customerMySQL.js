@@ -4,6 +4,7 @@ export const initialState = Store;
 export default function customerReducer(state = initialState, action) {
   switch (action.type) {
     case 'CUSTOMERMYSQL_ERROR': {
+      console.log(action)
       return {
         ...state,
         error: action.data,
