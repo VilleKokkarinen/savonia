@@ -32,11 +32,12 @@ class UpdateCustomer extends React.Component {
 
   constructor(props) {
     super(props);
+    console.log(props)
     this.state = {
-      name: props.customer.customer.name || '',
-      address: props.customer.customer.address || '',
-      postnumber: props.customer.customer.postnumber || '',
-      postlocation: props.customer.customer.postlocation || '',
+      name: props.customer.name || '',
+      address: props.customer.address || '',
+      postnumber: props.customer.postnumber || '',
+      postlocation: props.customer.postlocation || '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -74,7 +75,7 @@ class UpdateCustomer extends React.Component {
       <div>
           <Row className="pb-3">
         <Col sm="12">
-          <Link className="btn btn-primary" to={`/customer/${this.props.customer.customer.id}`}>
+          <Link className="btn btn-primary" to={`/customer/${this.props.customer.id}`}>
             <i className="icon-arrow-left" />
             {' Back'}
           </Link>

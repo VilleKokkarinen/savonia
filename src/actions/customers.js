@@ -50,7 +50,7 @@ export function createCustomer(formData) {
     if (!postlocation) return reject({ message: errorMessages.missingPostlocation }); 
 
     var id = FirebaseRef.child('customers/').push().key;
-    FirebaseRef.child('mychild').child(id).set({});
+    FirebaseRef.child('customers').child(id).set({});
 
     return FirebaseRef.child(`customers`).child(id).set({ id, name,address,postnumber,postlocation })
       .then(async () => {
